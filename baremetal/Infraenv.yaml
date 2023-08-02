@@ -1,0 +1,20 @@
+apiVersion: agent-install.openshift.io/v1beta1
+kind: InfraEnv
+metadata:
+  labels:
+    agentclusterinstalls.extensions.hive.openshift.io/location: delhi
+    networkType: static
+  name: hcpbaremetal
+  namespace: clusters-hcpbaremetal
+spec:
+  agentLabels:
+    agentclusterinstalls.extensions.hive.openshift.io/location: delhi
+  cpuArchitecture: x86_64
+  ipxeScriptType: DiscoveryImageAlways
+  nmStateConfigLabelSelector:
+    matchLabels:
+      infraenvs.agent-install.openshift.io: hcpbaremetal
+  pullSecretRef:
+    name: pullsecret-hcpbaremetal
+  sshAuthorizedKey: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMa0RLHxDNVLQnN8rxcliwOrjXQ51A1DOp1Wy2l4ZeDc
+    kni@ocpbastionbm.intel.demolab.com

@@ -1,0 +1,18 @@
+apiVersion: metal3.io/v1alpha1
+kind: BareMetalHost
+metadata:
+  annotations:
+    bmac.agent-install.openshift.io/hostname: hcpbmworker1.intel.demolab.com
+    inspect.metal3.io: disabled
+  labels:
+    infraenvs.agent-install.openshift.io: hcpbaremetal
+  name: hcpbmworker1
+  namespace: clusters-hcpbaremetal
+spec:
+  automatedCleaningMode: disabled
+  bmc:
+    address: 192.168.50.106
+    credentialsName: bmc-hcpbmworker
+    disableCertificateVerification: true
+  bootMACAddress: a4:bf:01:3d:d4:87
+  online: true

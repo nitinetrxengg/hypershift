@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  password: cm9vdDEyMw==
+  username: cm9vdA==
+kind: Secret
+metadata:
+  labels:
+    environment.metal3.io: baremetal
+  name: bmc-hcpbmworker
+  namespace: clusters-hcpbaremetal
+type: Opaque

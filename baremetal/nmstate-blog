@@ -1,0 +1,21 @@
+dns-resolver:
+   config:
+     search:
+     - intel.demolab.com
+     server:
+     - 192.168.40.117
+interfaces:
+ - ipv4:
+      address:
+        - ip: 192.168.40.106
+          prefix-length: 24
+      enabled: true
+   name: eno1
+   state: up
+   type: ethernet
+routes:
+  config:
+  - destination: 0.0.0.0/0
+    next-hop-address: 192.168.40.2
+    next-hop-interface: eno1
+    table-id: 254
